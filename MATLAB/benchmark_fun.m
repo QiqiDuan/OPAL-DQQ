@@ -85,8 +85,8 @@ end
 function y = rosenbrock(x)
     [~, fun_dim] = size(x);
     if fun_dim < 2
-        error(['\n\n\nERROR ---> benchmark_fun.m -> rosenbrock(x) -> ' ...
-            '<fun_dim> of input argument x = %d (should >= 2).\n\n\n'], fun_dim)
+        error(['ERROR ---> benchmark_fun.m -> rosenbrock(x) -> ' ...
+            '<fun_dim> of input argument x = %d (should >= 2).'], fun_dim)
     end
     y = 100 * sum((x(:, 1 : (fun_dim - 1)) .^ 2 - x(:, 2 : fun_dim)) .^ 2, 2) ...
         + sum((x(:, 1 : (fun_dim - 1)) - 1) .^ 2, 2);
